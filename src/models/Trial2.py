@@ -2,7 +2,7 @@ import wave
 import numpy as np
 import matplotlib.pyplot as plt
 
-wav_obj = wave.open('Audio\T\Becca_T.wav', 'rb')
+wav_obj = wave.open('src\Audio\T\Becca_T.wav', 'rb')
 
 sample_freq = wav_obj.getframerate()
 samples = wav_obj.getnframes()
