@@ -20,10 +20,10 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import confusion_matrix
 
-audio_path = '\lereb\Downloads\WAV Audio Files\Becca-kick.wav'
-ipd.Audio(audio_path)
+audio_path = '\lereb\Downloads\Audio\T\Becca T.wav'
+ipd.Audio(audio_path,44100)
 
-x, sr = librosa.load(audio_path,sr=22)
+x, sr = librosa.load(audio_path,sr=4)
 
 plt.figure(figsize=(12, 5))
 librosa.display.waveplot(x, sr=sr)
