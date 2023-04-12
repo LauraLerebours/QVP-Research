@@ -3,11 +3,13 @@
 import logging
 import os
 
+import sys
+sys.path.append('C:Users\\lereb\\QVP-Research\\src\\classifier')
 import librosa as lr
 import numpy as np
 from keras.models import load_model
 
-from classifier.preprocessing import SR, HOP_LENGTH, N_MELS, N_FFT, \
+from preprocessing import SR, HOP_LENGTH, N_MELS, N_FFT, \
     get_mel_spec, CLASSES
 
 logging.basicConfig()

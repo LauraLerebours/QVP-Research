@@ -6,8 +6,9 @@ import numpy as np
 from sklearn.utils import compute_class_weight
 from keras import Model
 from keras.callbacks import EarlyStopping, ModelCheckpoint
-
-from classifier.models import build_cnn3_classifier
+import sys
+sys.path.append('C:Users\\lereb\\QVP-Research\\src\\classifier')
+from models import build_cnn3_classifier
 
 logging.basicConfig()
 log = logging.getLogger(__name__)
@@ -24,7 +25,7 @@ def train_drum_classifier(
         val_split: float = 0.10,
         val_data: Tuple[np.ndarray, np.ndarray] = None, # type: ignore
         patience: int = 10,
-        output_dir_path: str = '../../models/',
+        output_dir_path: str = '..\\..\\models\\',
         class_weights: Dict[int, float] = None) -> None: # type: ignore
     save_path = os.path.join(
         output_dir_path,

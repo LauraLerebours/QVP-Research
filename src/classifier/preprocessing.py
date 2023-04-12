@@ -18,27 +18,27 @@ log = logging.getLogger(__name__)
 log.setLevel(level=os.environ.get('LOGLEVEL', 'INFO'))
 
 CLASSES = [
-    'kick',
-    'snare',
-    'hihat_closed',
-    'hihat_open',
-    'tom_low',
-    'tom_mid',
-    'tom_high',
-    'clap',
-    'rim'
+    'B',
+    'T',
+    # 'hihat_closed',
+    # 'hihat_open',
+    # 'tom_low',
+    # 'tom_mid',
+    # 'tom_high',
+    'C'
+    # 'rim'
 ]
 
 CLASS_SEARCH_WORDS = {
-    0: [['kick']],
-    1: [['snare']],
-    2: [['hihat', 'hi-hat', 'hat'], ['open']],
-    3: [['hihat', 'hi-hat', 'hat'], ['close']],
-    4: [['tom'], ['low', 'floor', 'lo_']],
-    5: [['tom'], ['mid']],
-    6: [['tom'], ['high', 'hi_']],
-    7: [['clap']],
-    8: [['_rim', 'rim_']],
+    0: [['B']],
+    1: [['T']],
+    # 2: [['hihat', 'hi-hat', 'hat'], ['open']],
+    # 3: [['hihat', 'hi-hat', 'hat'], ['close']],
+    # 4: [['tom'], ['low', 'floor', 'lo_']],
+    # 5: [['tom'], ['mid']],
+    # 6: [['tom'], ['high', 'hi_']],
+    2: [['C']],
+    # 8: [['_rim', 'rim_']],
 }
 
 FILE_ENDINGS = ('.wav', '.aif', '.ogg', '.flac')
