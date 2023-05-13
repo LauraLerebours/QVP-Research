@@ -5,10 +5,13 @@ from inference import classifier_inference_example
 from preprocessing import find_sorted_classifier_samples, \
     find_classifier_samples, calc_mel_spec_example
 from training import classifier_training_example
+from tempfile import TemporaryDirectory
+import pickle
 
 if __name__ == '__main__':
     samples_root_dir = 'C:\\Users\\lereb\\QVP-Research\\src\\data\\input\\Train\\B'
-    samples_save_path = '...\\data\\samples.npz'
+    # samples_save_path = 'C:\\Users\\lereb\\QVP-Research\\src\\data\\samples.npz
+    samples_save_path = os.path.join(TemporaryDirectory().name, 'samples.npz')
     samples_are_sorted = True
     print('sorting samples')
     if samples_are_sorted:

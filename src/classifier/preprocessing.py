@@ -219,9 +219,10 @@ def find_sorted_classifier_samples(
                     if f.endswith(file_endings) and not f.startswith('._'):
                         path = os.path.join(root, f)
                         file_size = os.path.getsize(path)
-                        if file_size <= max_size:
-                            path_s_classes.append((path, assigned_class))
-                            s_class_dist[assigned_class] += 1
+                        print(file_size)
+                        #if file_size <= max_size:
+                        path_s_classes.append((path, assigned_class))
+                        s_class_dist[assigned_class] += 1
 
     log.info(f'Found {len(path_s_classes)} small enough {file_endings} files')
 
